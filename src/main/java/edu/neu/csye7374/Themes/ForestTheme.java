@@ -6,9 +6,8 @@ import java.util.List;
 import edu.neu.csye7374.Models.Room;
 import edu.neu.csye7374.Models.Theme;
 import edu.neu.csye7374.Models.User;
-import edu.neu.csye7374.Rooms.HauntedMansion;
-import edu.neu.csye7374.Rooms.JailBreak;
-import edu.neu.csye7374.Rooms.UnderwaterAdventure;
+import edu.neu.csye7374.Rooms.ForestEscape;
+
 
 public class ForestTheme extends Theme{
     
@@ -25,20 +24,25 @@ public class ForestTheme extends Theme{
     @Override
     public void loadRooms() {
         List<Room> rooms = new ArrayList<>();
-        JailBreak jailbreak = (JailBreak) new JailBreak.JailBreakBuilder().build();
-        HauntedMansion hauntedMansion = (HauntedMansion) new HauntedMansion.HauntedMansionBuilder().build();
-        UnderwaterAdventure underwaterAdventure = (UnderwaterAdventure) new UnderwaterAdventure.UnderwaterAdventureBuilder().build();
-        rooms.add(hauntedMansion);
-        rooms.add(jailbreak);
-        rooms.add(underwaterAdventure);
+        ForestEscape forestescape = (ForestEscape) new ForestEscape.ForestEscapeBuilder().build();
+//        HauntedMansion hauntedMansion = (HauntedMansion) new HauntedMansion.HauntedMansionBuilder().build();
+//        UnderwaterAdventure underwaterAdventure = (UnderwaterAdventure) new UnderwaterAdventure.UnderwaterAdventureBuilder().build();
+//        rooms.add(hauntedMansion);
+//        rooms.add(jailbreak);
+
+
+        rooms.add(forestescape);
         setRooms(rooms);
     }
 
     @Override
     public void loadInstructions() {
         List<String> instructions = new ArrayList<>();
-        instructions.add("You are a programmer who has been arrested for writing bad code. You must escape the jail and get back to your computer to fix your code before it's too late!");
-        instructions.add("You are in a jail cell. You need to escape the jail cell to enter the next room.");
+        instructions.add("You are a lost traveler who wandered too deep into the heart of an enchanted forest. The only way out is to solve the ancient mysteries hidden within.");
+        instructions.add("The forest is alive with secrets, and the trees whisper of long-forgotten knowledge. Your survival depends on your ability to understand the language of nature.");
+        instructions.add("You find yourself surrounded by towering trees and a dense canopy. To escape, you must navigate through the forest and solve the puzzles left by those who came before you.");
+        instructions.add("Every step you take brings you closer to freedom, but beware, the forest doesn't easily reveal its secrets. Only the wise will find their way out.");
+
         setInstructions(instructions);
     }
     
