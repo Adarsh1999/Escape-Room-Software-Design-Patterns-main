@@ -7,7 +7,8 @@ import edu.neu.csye7374.Models.Room;
 import edu.neu.csye7374.Models.Theme;
 import edu.neu.csye7374.Models.User;
 import edu.neu.csye7374.Rooms.ForestEscape;
-
+import edu.neu.csye7374.Rooms.CaveOfEchoes;
+import edu.neu.csye7374.Rooms.MountainAscent;
 
 public class ForestTheme extends Theme{
     
@@ -25,13 +26,15 @@ public class ForestTheme extends Theme{
     public void loadRooms() {
         List<Room> rooms = new ArrayList<>();
         ForestEscape forestescape = (ForestEscape) new ForestEscape.ForestEscapeBuilder().build();
-//        HauntedMansion hauntedMansion = (HauntedMansion) new HauntedMansion.HauntedMansionBuilder().build();
-//        UnderwaterAdventure underwaterAdventure = (UnderwaterAdventure) new UnderwaterAdventure.UnderwaterAdventureBuilder().build();
+        CaveOfEchoes caveofechoes = (CaveOfEchoes) new CaveOfEchoes.CaveOfEchoesBuilder().build();
+        MountainAscent mountainascent = (MountainAscent) new MountainAscent.MountainAscentBuilder().build();
 //        rooms.add(hauntedMansion);
 //        rooms.add(jailbreak);
 
 
         rooms.add(forestescape);
+        rooms.add(caveofechoes);
+        rooms.add(mountainascent);
         setRooms(rooms);
     }
 
